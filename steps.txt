@@ -1,0 +1,68 @@
+npm init --y
+npm install
+IMportant packages:
+
+Express,Mongoose,Socket.IO,Body-parser,dotenv,Axios,Joi,jsonwebtoken
+,Passport,Morgan,Cors,Multer,Bcrypt,Express-validator,Nodemailer,express-rate-limit,hpp,nodemon,helmet
+
+cors bcrypt express-validator nodemainlar express-rate-limit hpp nodemon helmet jsonwebtoken
+
+CLient
+
+npm create vite
+client 
+react
+cd client 
+npm i
+
+
+backend 
+
+src
+    controller
+    middlewares
+    models
+    routes
+    services
+    utility
+
+app.js
+index.js
+
+
+models
+    categoryM
+    BrandM
+    ProductM
+    ProductDetailM
+    PoductSliderM
+    userM
+    Profile
+    Review
+    CartM 
+    wishM
+    paymentSettingsM //ssl 
+    invoiceM
+    invoiceProductM
+
+npx nodemon index.js
+
+
+controller
+    Brand
+    category
+    invoice
+    product 
+    Profile
+    user
+
+
+
+
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+ npm start
+
+
+ 
