@@ -5,6 +5,7 @@ const ProductController =require('../controllers/ProductController');
 const UserController =require('../controllers/UserController');
 const ProfileController =require('../controllers/ProfileController');
 const InvoiceController =require('../controllers/InvoiceController');
+const AuthVerification =require('../middlewares/AuthVerification');
 const router =express.Router();
 
 
@@ -37,15 +38,15 @@ router.get('/VeryfyLogin',UserController.VeryfyLogin);
 
 
 //profile
-router.get('/CreateProfile',ProfileController.CreateProfile);
-router.get('/ReadProfile',ProfileController.ReadProfile);
-router.get('/UpdateProfile',ProfileController.UpdateProfile);
+router.get('/CreateProfile',AuthVerification,ProfileController.CreateProfile);
+router.get('/ReadProfile',AuthVerification,ProfileController.ReadProfile);
+router.get('/UpdateProfile',AuthVerification,ProfileController.UpdateProfile);
 
 
 //invoice
-router.get('/InvoiceCreate',InvoiceController.InvoiceCreate);
-router.get('/InvoiceList',InvoiceController.InvoiceList);
-router.get('/InvoiceProductList',InvoiceController.InvoiceProductList);
+router.get('/InvoiceCreate',AuthVerification,InvoiceController.InvoiceCreate);
+router.get('/InvoiceList',AuthVerification,InvoiceController.InvoiceList);
+router.get('/InvoiceProductList',AuthVerification,InvoiceController.InvoiceProductList);
 router.get('/PaymentSuccess',InvoiceController.PaymentSuccess);
 router.get('/PaymentCancel',InvoiceController.PaymentCancel);
 router.get('/PaymentFail',InvoiceController.PaymentFail);
